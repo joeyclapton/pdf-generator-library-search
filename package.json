@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/joeyclapton/pdf-generator-library-search/issues"
   },
-  "homepage": "https://github.com/joeyclapton/pdf-generator-library-search#readme"
+  "homepage": "https://github.com/joeyclapton/pdf-generator-library-search#readme",
+  "dependencies": {
+    "selenium-webdriver": "^4.8.2"
+  }
 }
