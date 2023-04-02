@@ -76,15 +76,6 @@ async function init() {
       console.log(`${i}: ${booksTitles.length}`);
     }
 
-    fs.appendFile(
-      "mynewfile1.txt",
-      JSON.stringify(booksTitles),
-      function (err) {
-        if (err) throw err;
-        console.log("Saved!");
-      }
-    );
-
     pdf.fontSize("13").fillColor("#6155a4").text(JSON.stringify(booksTitles), {
       align: "center",
     });
