@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/joeyclapton/pdf-generator-library-search#readme",
   "dependencies": {
+    "dotenv": "^16.0.3",
     "selenium-webdriver": "^4.8.2"
   }
 }
