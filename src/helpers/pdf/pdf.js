@@ -10,11 +10,23 @@ const createPdf = (content) => {
     align: "center",
   });
 
-  content.map((text, index) => {
-    const _text = `${index + 1} - ${text}`;
+  content.map(({ bookTitle, bookLink }, index) => {
+    const title = `Título: - ${bookTitle}`;
+    const link = `Link: - ${bookLink}`;
+    const id = `${index}: `;
 
     pdf.moveDown();
-    pdf.fontSize("13").font("Helvetica").fillColor("#6155a4").text(_text, {
+    pdf.fontSize("13").font("Helvetica").fillColor("#6155a4").text(id, {
+      align: "left",
+    });
+
+    pdf.moveDown();
+    pdf.fontSize("13").font("Helvetica").fillColor("#6155a4").text(title, {
+      align: "left",
+    });
+
+    pdf.moveDown();
+    pdf.fontSize("13").font("Helvetica").fillColor("#6155a4").text(link, {
       align: "left",
     });
   });

@@ -9,7 +9,14 @@ const getBooksTitles = async (driver) => {
   const booksTitles = [];
   for (const book of booksList) {
     const bookTitle = await book.findElement(By.css(".title-link")).getText();
-    booksTitles.push(bookTitle);
+    const bookLink = await book
+      .findElement(By.css(".title-link"))
+      .getAttribute("href");
+
+    booksTitles.push({
+      bookTitle,
+      bookLink,
+    });
   }
 
   return booksTitles;
